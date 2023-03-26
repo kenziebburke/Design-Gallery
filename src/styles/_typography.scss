@@ -11,13 +11,6 @@ p, a, li, button{
 }
 
 
-
-li, a {
-    font-family: 'Varta', sans-serif;
-    text-transform: uppercase;
-    color: black;
-}
-
 p{
     line-height: 1.2rem;
     letter-spacing: 0.05rem;
@@ -29,4 +22,3 @@ input, label, textarea, legend{
     font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
-// fix font imports

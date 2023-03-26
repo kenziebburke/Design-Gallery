@@ -7,11 +7,11 @@ function App() {
     <div className="App">
       <header>
         <div className="wrapper">
-          <p>
+          <p className="logo">
             <span className="designLogo">Design</span> <span>Gallery</span>
           </p>
           <h1>Design made easy.</h1>
-          <div className="headerbottom flexContainer">
+          <div className="headerBottom flexContainer">
             <div className="left">
               <p>
                 Hey there, welcome to the Design Gallery! The perfect solution
