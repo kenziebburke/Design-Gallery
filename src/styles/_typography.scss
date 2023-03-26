@@ -1,11 +1,11 @@
 h1, h2, h3, h4, h5, h6{
-    font-family: 'Belleza', serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 p, a, li, button{
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: clamp(0.8rem, 2vw, 1rem);
     margin: 0;
 }
@@ -13,18 +13,19 @@ p, a, li, button{
 
 
 li, a {
+    font-family: 'Varta', sans-serif;
     text-transform: uppercase;
     color: black;
 }
 
 p{
-    line-height: 1.6rem;
+    line-height: 1.2rem;
     letter-spacing: 0.05rem;
     font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
-input, label, textarea{
-    font-family: 'Arimo', sans-serif;
+input, label, textarea, legend{
+    font-family: 'Varta', sans-serif;
     font-size: clamp(0.8rem, 2vw, 1rem);
 }
 

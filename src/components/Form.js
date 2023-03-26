@@ -31,8 +31,8 @@ const Form = (props) => {
                             </div>
 
                             <div className="flexContainerRadio">
-                                <label htmlFor="muted">Muted grey</label>
-                                <input type="radio" name="color"  id='muted' value="9zgDmRsNiXw"/>
+                                <label htmlFor="orange">Orange</label>
+                                <input type="radio" name="color"  id='orange' value="Q5pXkRl7OWY"/>
                             </div>
 
                             <div className="flexContainerRadio">
@@ -41,8 +41,8 @@ const Form = (props) => {
                             </div>
 
                             <div className="flexContainerRadio">
-                                <label htmlFor="yellow">Yellow</label>
-                                <input type="radio" name="color" id='yellow' value="Vbws0aool7M"/>
+                                <label htmlFor="blue">Blue</label>
+                                <input type="radio" name="color" id='blue' value="ZWUlJDNL7L8"/>
                             </div>
 
                             <div className="flexContainerRadio">

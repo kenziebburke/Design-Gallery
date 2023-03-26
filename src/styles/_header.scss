@@ -1,57 +1,9 @@
-.headerTop{
-    .design{
-        flex-basis: 30%;
-        border: 1px solid black;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        h1{
-            padding: 20px 0 20px 0;
-            font-size: clamp(3rem, 2vw, 5rem);
-        }
+header{
+    min-height: 100vh;
+    h1 {
+        padding: 20px 0 20px 0;
+        font-size: clamp(3rem, 2vw, 5rem);
     }
-    figure{
-        flex-basis: 70%;
-        border: 1px solid black;
-        height: 300px;
-        img{
-            height: 100%;
-        }
-    }
+    
 }
 
-.headerMiddle{
-    figure{
-        flex-basis: 70%;
-        border: 1px solid black;
-        height: 300px;
-        img{
-            height: 100%;
-        }
-    }
-    .made{
-        flex-basis: 30%;
-        border: 1px solid black;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        h2{
-            font-size: clamp(3rem, 2vw, 5rem);
-        }
-    }
-}
-
-.headerBottom{
-    .easy{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid black;
-        height: 20vh;
-        h2{
-            font-size: clamp(3rem, 2vw, 5rem);
-        }
-    }
-}

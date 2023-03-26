@@ -8,13 +8,14 @@ const Gallery = (props) => {
   return (
     <section className="gallery">
       <div className="wrapper">
-        <ul className="galleryUl flexContainer">
-          {props.currentGallery.map((pic) => {
+        <ul className={`galleryUl flexContainer gallery${props.currentGallery.length}`}>
+          {props.currentGallery.map((pic, i) => {
             return (
               <Pic
                 key={pic.id}
                 photoUrl={pic.urls.regular}
                 altText={pic.alt_description}
+                className={`pic${i + 1}`}
               />
             );
           })}
