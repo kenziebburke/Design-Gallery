@@ -351,8 +351,37 @@ input, label, textarea {
   font-size: clamp(3rem, 2vw, 5rem);
 }
 
+.coloursSelection .flexContainer {
+  justify-content: space-between;
+}
 .coloursSelection legend {
   border: 1px solid black;
   width: 100%;
   padding-left: 50px;
+}
+.coloursSelection .flexContainerDesert {
+  display: flex;
+  position: relative;
+}
+.coloursSelection .flexContainerDesert input[type=radio] {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  opacity: 1;
+}
+.coloursSelection .flexContainerDesert label {
+  display: inline-block;
+  background-color: #ddd;
+  padding: 10px 20px;
+  border: 2px solid #444;
+  border-radius: 4px;
+}
+.coloursSelection .flexContainerDesert input[type=radio]:checked + label:checked {
+  background-color: #bfb;
+  border-color: #4c4;
+}
+.coloursSelection .flexContainerDesert input[type=radio]:focus + label,
+.coloursSelection .flexContainerDesert input[type=radio]:hover + label {
+  border: 2px dashed #444;
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */

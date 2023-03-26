@@ -24,20 +24,32 @@ const Form = (props) => {
                     <fieldset className='coloursSelection' name="color" value={selectedValueOne} onChange={handleSelection}>
                         <legend>Choose a colour palette.</legend>
 
-                        <label htmlFor="desert">Desert</label>
-                        <input type="radio"  name="color" id='desert' value="NU2mT-5c8_4"/>
+                        <div className="flexContainer">
+                            <div className="flexContainerDesert">
+                                <label htmlFor="desert"> <span className='sr-only'>Desert</span></label>
+                                <input type="radio"  name="color" id='desert' value="NU2mT-5c8_4"/>
+                            </div>
 
-                        <label htmlFor="muted">Muted grey</label>
-                        <input type="radio" name="color"  id='muted' value="9zgDmRsNiXw"/>
+                            <div className="flexContainerRadio">
+                                <label htmlFor="muted">Muted grey</label>
+                                <input type="radio" name="color"  id='muted' value="9zgDmRsNiXw"/>
+                            </div>
 
-                        <label htmlFor="green">Green</label>
-                        <input type="radio" name="color" id='green' value="_u4P24KNSfI"/>
+                            <div className="flexContainerRadio">
+                                <label htmlFor="green">Green</label>
+                                <input type="radio" name="color" id='green' value="_u4P24KNSfI"/>
+                            </div>
 
-                        <label htmlFor="yellow">Yellow</label>
-                        <input type="radio" name="color" id='yellow' value="Vbws0aool7M"/>
+                            <div className="flexContainerRadio">
+                                <label htmlFor="yellow">Yellow</label>
+                                <input type="radio" name="color" id='yellow' value="Vbws0aool7M"/>
+                            </div>
 
-                        <label htmlFor="red">Red</label>
-                        <input type="radio" name="color" id='red' value="YW1V-v78Bck"/>
+                            <div className="flexContainerRadio">
+                                <label htmlFor="red">Red</label>
+                                <input type="radio" name="color" id='red' value="YW1V-v78Bck"/>
+                            </div>
+                        </div>
                     </fieldset>
 
                     <fieldset className='numberOfPics' value={selectedValueOne} onChange={handleSelectionTwo} >
