@@ -368,6 +368,7 @@ header .headerBottom figure img {
 .coloursSelection .flexContainer {
   justify-content: space-around;
   padding: 60px 0 60px 0;
+  flex-wrap: wrap;
 }
 .coloursSelection legend {
   width: 100%;
@@ -378,6 +379,9 @@ header .headerBottom figure img {
 .flexContainerGreen {
   display: flex;
   position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  margin: 10px 0;
 }
 .flexContainerGreen input[type=radio] {
   position: absolute;
@@ -392,14 +396,16 @@ header .headerBottom figure img {
   padding: 10px 20px;
   border: 3px solid rgb(52, 114, 90);
 }
-.flexContainerGreen input[type=radio]:checked + label:checked {
+.flexContainerGreen input[type=radio]:checked + label{
   background-color: rgb(100, 167, 141);;
-  border-color: #4c4;
+  color: antiquewhite;
+  border: 3px solid antiquewhite;
 }
 .flexContainerGreen input[type=radio]:focus + label,
 .flexContainerGreen input[type=radio]:hover + label {
-  border: 2px dashed #444;
-  cursor: pointer;
+  color: antiquewhite;
+  background-color: rgb(52, 114, 90);
+  border: 3px solid antiquewhite;
 }
 
 
@@ -407,6 +413,9 @@ header .headerBottom figure img {
 .flexContainerOrange {
   display: flex;
   position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  margin: 10px 0;
 }
 .flexContainerOrange input[type=radio] {
   position: absolute;
@@ -421,14 +430,16 @@ header .headerBottom figure img {
   padding: 10px 20px;
   border: 3px solid orange;
 }
-.flexContainerOrange input[type=radio]:checked + label:checked {
-  background-color: #bfb;
-  border-color: #4c4;
+.flexContainerOrange input[type=radio]:checked + label{
+  background-color: orange;
+  color: antiquewhite;
+  border: 3px solid antiquewhite;
 }
 .flexContainerOrange input[type=radio]:focus + label,
 .flexContainerOrange input[type=radio]:hover + label {
-  border: 2px dashed #444;
-  cursor: pointer;
+  color: antiquewhite;
+  background-color: orange;
+  border: 3px solid antiquewhite;
 }
 
 
@@ -436,6 +447,9 @@ header .headerBottom figure img {
 .flexContainerBlue {
   display: flex;
   position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  margin: 10px 0;
 }
 .flexContainerBlue input[type=radio] {
   position: absolute;
@@ -450,21 +464,27 @@ header .headerBottom figure img {
   padding: 10px 20px;
   border: 3px solid blue;
 }
-.flexContainerBlue input[type=radio]:checked + label:checked {
-  background-color: #bfb;
-  border-color: #4c4;
+.flexContainerBlue input[type=radio]:checked + label {
+  background-color: blue;
+  color: antiquewhite;
+  border: 3px solid antiquewhite;
 }
 .flexContainerBlue input[type=radio]:focus + label,
 .flexContainerBlue input[type=radio]:hover + label {
-  border: 2px dashed #444;
-  cursor: pointer;
+  color: antiquewhite;
+  background-color: blue;
+  border: 3px solid antiquewhite;
 }
 
 
 
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!RED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */.flexContainerRed {
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!RED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.flexContainerRed {
   display: flex;
   position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  margin: 10px 0;
 }
 .flexContainerRed input[type=radio] {
   position: absolute;
@@ -479,14 +499,16 @@ header .headerBottom figure img {
   padding: 10px 20px;
   border: 3px solid red;
 }
-.flexContainerRed input[type=radio]:checked + label:checked {
-  background-color: #bfb;
-  border-color: #4c4;
+.flexContainerRed input[type=radio]:checked + label {
+  background-color: red;
+  color: antiquewhite;
+  border: 3px solid antiquewhite;
 }
 .flexContainerRed input[type=radio]:focus + label,
 .flexContainerRed input[type=radio]:hover + label {
-  border: 2px dashed #444;
-  cursor: pointer;
+  color: antiquewhite;
+  background-color: red;
+  border: 3px solid antiquewhite;
 }
 
 
@@ -494,6 +516,9 @@ header .headerBottom figure img {
 .flexContainerBeige {
   display: flex;
   position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  margin: 10px 0;
 }
 .flexContainerBeige input[type=radio] {
   position: absolute;
@@ -508,14 +533,16 @@ header .headerBottom figure img {
   padding: 10px 20px;
   border: 3px solid burlywood;
 }
-.flexContainerBeige input[type=radio]:checked + label:checked {
-  background-color: #bfb;
-  border-color: #4c4;
+.flexContainerBeige input[type=radio]:checked + label {
+  background-color: burlywood;
+  color: antiquewhite;
+  border: 3px solid antiquewhite;
 }
 .flexContainerBeige input[type=radio]:focus + label,
 .flexContainerBeige input[type=radio]:hover + label {
-  border: 2px dashed #444;
-  cursor: pointer;
+  color: antiquewhite;
+  background-color: burlywood;
+  border: 3px solid antiquewhite;
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!FORM BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -542,9 +569,10 @@ header .headerBottom figure img {
 }
 .flexContainerTwo label {
   font-size: clamp(2rem, 7vw, 7rem);
+  transition: all .2s ease-in-out;
 }
-.flexContainerTwo input[type=radio]:checked + label:checked {
-  color: red;
+.flexContainerTwo input[type=radio]:checked + label {
+  color: rgb(52, 114, 90);
 }
 .flexContainerTwo input[type=radio]:focus + label,
 .flexContainerTwo input[type=radio]:hover + label {
@@ -565,9 +593,10 @@ header .headerBottom figure img {
 }
 .flexContainerThree label {
   font-size: clamp(2rem, 7vw, 7rem);
+  transition: all .2s ease-in-out;
 }
-.flexContainerThree input[type=radio]:checked + label:checked {
-  color: red;
+.flexContainerThree input[type=radio]:checked + label {
+  color: blue;
 }
 .flexContainerThree input[type=radio]:focus + label,
 .flexContainerThree input[type=radio]:hover + label {
@@ -588,8 +617,9 @@ header .headerBottom figure img {
 }
 .flexContainerFour label {
   font-size: clamp(2rem, 7vw, 7rem);
+  transition: all .2s ease-in-out;
 }
-.flexContainerFour input[type=radio]:checked + label:checked {
+.flexContainerFour input[type=radio]:checked + label{
   color: red;
 }
 .flexContainerFour input[type=radio]:focus + label,
@@ -598,7 +628,7 @@ header .headerBottom figure img {
   cursor: pointer;
 }
 
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!FOUR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!FIVE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .flexContainerFive {
   display: flex;
   position: relative;
@@ -611,9 +641,10 @@ header .headerBottom figure img {
 }
 .flexContainerFive label {
   font-size: clamp(2rem, 7vw, 7rem);
+  transition: all .2s ease-in-out;
 }
-.flexContainerFive input[type=radio]:checked + label:checked {
-  color: red;
+.flexContainerFive input[type=radio]:checked + label {
+  color: orange ;
 }
 .flexContainerFive input[type=radio]:focus + label,
 .flexContainerFive input[type=radio]:hover + label {
@@ -635,7 +666,3 @@ form button{
   text-transform: uppercase;
 }
 
-
-img{
-  border: 1px solid #fdfbf5;
-}

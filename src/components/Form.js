@@ -22,7 +22,6 @@ const Form = (props) => {
             props.handleSubmit(event, selectedValueOne, selectedValueTwo);
           }}
         >
-          {/* could have it as radio buttons and style them in a certain way rather than input type img ... or the img could live in the label with sr only class for accessibiliy*/}
           <fieldset
             className="coloursSelection"
             name="color"
@@ -33,48 +32,53 @@ const Form = (props) => {
 
             <div className="flexContainer">
               <div className="flexContainerGreen">
-                <label htmlFor="green">Green</label>
                 <input
                   type="radio"
                   name="color"
                   id="green"
                   value="_u4P24KNSfI"
                 />
+                <label htmlFor="green">Green</label>
               </div>
 
               <div className="flexContainerOrange">
-                <label htmlFor="orange">Orange</label>
                 <input
                   type="radio"
                   name="color"
                   id="orange"
                   value="Q5pXkRl7OWY"
                 />
+                <label htmlFor="orange">Orange</label>
               </div>
 
               <div className="flexContainerBlue">
-                <label htmlFor="blue">Blue</label>
                 <input
                   type="radio"
                   name="color"
                   id="blue"
                   value="ZWUlJDNL7L8"
                 />
+                <label htmlFor="blue">Blue</label>
               </div>
 
               <div className="flexContainerRed">
+                <input 
+                type="radio" 
+                name="color" 
+                id="red" 
+                value="YW1V-v78Bck" 
+                />
                 <label htmlFor="red">Red</label>
-                <input type="radio" name="color" id="red" value="YW1V-v78Bck" />
               </div>
 
               <div className="flexContainerBeige">
-                <label htmlFor="beige"> Beige </label>
                 <input
                   type="radio"
                   name="color"
                   id="beige"
                   value="NU2mT-5c8_4"
                 />
+                <label htmlFor="beige"> Beige </label>
               </div>
             </div>
           </fieldset>
@@ -85,27 +89,27 @@ const Form = (props) => {
             onChange={handleSelectionTwo}
           >
             <legend>
-              Choose the number of pieces of desired for your space.
+              Choose the number of pieces desired for your space.
             </legend>
             <div className="flexContainer">
               <div className="flexContainerTwo">
-                <label htmlFor="two">2</label>
                 <input type="radio" name="number" value={2} id="two" />
+                <label htmlFor="two">2</label>
               </div>
 
               <div className="flexContainerThree">
-                <label htmlFor="three">3</label>
                 <input type="radio" name="number" value={3} id="three" />
+                <label htmlFor="three">3</label>
               </div>
 
               <div className="flexContainerFour">
-                <label htmlFor="four">4</label>
                 <input type="radio" name="number" value={4} id="four" />
+                <label htmlFor="four">4</label>
               </div>
 
               <div className="flexContainerFive">
-                <label htmlFor="five">5</label>
                 <input type="radio" name="number" value={5} id="five" />
+                <label htmlFor="five">5</label>
               </div>
             </div>
           </fieldset>
