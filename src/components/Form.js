@@ -64,20 +64,17 @@ const Form = (props) => {
 
               <div className="flexContainerRed">
                 <label htmlFor="red">Red</label>
-                <input 
-                type="radio" 
-                name="color" 
-                id="red" 
-                value="YW1V-v78Bck" />
+                <input type="radio" name="color" id="red" value="YW1V-v78Bck" />
               </div>
 
               <div className="flexContainerBeige">
                 <label htmlFor="beige"> Beige </label>
-                <input 
-                type="radio" 
-                name="color" 
-                id="beige" 
-                value="NU2mT-5c8_4" />
+                <input
+                  type="radio"
+                  name="color"
+                  id="beige"
+                  value="NU2mT-5c8_4"
+                />
               </div>
             </div>
           </fieldset>
@@ -90,18 +87,27 @@ const Form = (props) => {
             <legend>
               Choose the number of pieces of desired for your space.
             </legend>
+            <div className="flexContainer">
+              <div className="flexContainerTwo">
+                <label htmlFor="two">2</label>
+                <input type="radio" name="number" value={2} id="two" />
+              </div>
 
-            <label htmlFor="two">2</label>
-            <input type="radio" name="number" value={2} id="two" />
+              <div className="flexContainerThree">
+                <label htmlFor="three">3</label>
+                <input type="radio" name="number" value={3} id="three" />
+              </div>
 
-            <label htmlFor="three">3</label>
-            <input type="radio" name="number" value={3} id="three" />
+              <div className="flexContainerFour">
+                <label htmlFor="four">4</label>
+                <input type="radio" name="number" value={4} id="four" />
+              </div>
 
-            <label htmlFor="four">4</label>
-            <input type="radio" name="number" value={4} id="four" />
-
-            <label htmlFor="five">5</label>
-            <input type="radio" name="number" value={5} id="five" />
+              <div className="flexContainerFive">
+                <label htmlFor="five">5</label>
+                <input type="radio" name="number" value={5} id="five" />
+              </div>
+            </div>
           </fieldset>
           <button type="submit">Submit</button>
         </form>
