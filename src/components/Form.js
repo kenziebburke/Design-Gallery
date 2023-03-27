@@ -32,30 +32,7 @@ const Form = (props) => {
             <legend>Choose a colour palette.</legend>
 
             <div className="flexContainer">
-              <div className="flexContainerDesert">
-                <label htmlFor="desert">
-                  {" "}
-                  <span className="sr-only">Desert</span>
-                </label>
-                <input
-                  type="radio"
-                  name="color"
-                  id="desert"
-                  value="NU2mT-5c8_4"
-                />
-              </div>
-
-              <div className="flexContainerRadio">
-                <label htmlFor="orange">Orange</label>
-                <input
-                  type="radio"
-                  name="color"
-                  id="orange"
-                  value="Q5pXkRl7OWY"
-                />
-              </div>
-
-              <div className="flexContainerRadio">
+              <div className="flexContainerGreen">
                 <label htmlFor="green">Green</label>
                 <input
                   type="radio"
@@ -65,7 +42,17 @@ const Form = (props) => {
                 />
               </div>
 
-              <div className="flexContainerRadio">
+              <div className="flexContainerOrange">
+                <label htmlFor="orange">Orange</label>
+                <input
+                  type="radio"
+                  name="color"
+                  id="orange"
+                  value="Q5pXkRl7OWY"
+                />
+              </div>
+
+              <div className="flexContainerBlue">
                 <label htmlFor="blue">Blue</label>
                 <input
                   type="radio"
@@ -75,9 +62,22 @@ const Form = (props) => {
                 />
               </div>
 
-              <div className="flexContainerRadio">
+              <div className="flexContainerRed">
                 <label htmlFor="red">Red</label>
-                <input type="radio" name="color" id="red" value="YW1V-v78Bck" />
+                <input 
+                type="radio" 
+                name="color" 
+                id="red" 
+                value="YW1V-v78Bck" />
+              </div>
+
+              <div className="flexContainerBeige">
+                <label htmlFor="beige"> Beige </label>
+                <input 
+                type="radio" 
+                name="color" 
+                id="beige" 
+                value="NU2mT-5c8_4" />
               </div>
             </div>
           </fieldset>

@@ -222,14 +222,18 @@ html {
   overflow: hidden;
 }
 
-html {
-  color: #0D0D0D;
-  background-color: #fdfbf5;
-}
+/* ================================================================= */
 
-body {
-  border: 1px solid black;
-  margin: 15px;
+/* BASE STYLES */
+
+/* ================================================================= */
+
+html {
+  background-image: url(/src/assets/background.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fdfbf5;
 }
 
 img {
@@ -271,117 +275,250 @@ ul {
   display: flex;
 }
 
+/* ================================================================= */
+
+/* TYPOGROPHY */
+
+/* ================================================================= */
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Belleza", serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
 }
 
 p, a, li, button {
-  font-family: "Arimo", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: clamp(0.8rem, 2vw, 1rem);
   margin: 0;
 }
 
-li, a {
-  text-transform: uppercase;
-  color: black;
-}
-
 p {
-  line-height: 1.6rem;
+  line-height: 1.2rem;
   letter-spacing: 0.05rem;
   font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
-input, label, textarea {
-  font-family: "Arimo", sans-serif;
+input, label, textarea, legend {
+  font-family: "Varta", sans-serif;
   font-size: clamp(0.8rem, 2vw, 1rem);
+  text-transform: uppercase;
 }
 
-.headerTop .design {
-  flex-basis: 30%;
-  border: 1px solid black;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-.headerTop .design h1 {
-  padding: 20px 0 20px 0;
-  font-size: clamp(3rem, 2vw, 5rem);
-}
-.headerTop figure {
-  flex-basis: 70%;
-  border: 1px solid black;
-  height: 300px;
-}
-.headerTop figure img {
-  height: 100%;
+label{
+  font-size: clamp(1rem, 2vw, 4rem);
 }
 
-.headerMiddle figure {
-  flex-basis: 70%;
-  border: 1px solid black;
-  height: 300px;
+
+/* ================================================================= */
+
+/* HEADER */
+
+/* ================================================================= */
+
+header {
+  padding-top: 50px;
 }
-.headerMiddle figure img {
-  height: 100%;
+.logo {
+  font-family: "Varta", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 0.8rem;
 }
-.headerMiddle .made {
-  flex-basis: 30%;
-  border: 1px solid black;
-  display: flex;
+.logo .designLogo {
+  display: block;
+}
+header h1 {
+  padding: 40px 0 60px 0;
+  font-size: clamp(3rem, 9vw, 8rem);
+  width: 70%;
+  font-weight: lighter;
+}
+.headerBottom {
+  border-top: 2px solid #fdfbf5;
+  padding: 40px 0 40px 0;
   align-items: center;
-  justify-content: center;
 }
-.headerMiddle .made h2 {
-  font-size: clamp(3rem, 2vw, 5rem);
+.headerBottom p {
+  padding: 20px 0 10px 0;
+  text-transform: uppercase;
+}
+.headerBottom .left {
+  flex-basis: 75%;
+  margin-right: 5%;
+}
+.headerBottom figure {
+  flex-basis: 10%;
+  margin-left: 8%;
+}
+header .headerBottom figure img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
 
-.headerBottom .easy {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid black;
-  height: 20vh;
-}
-.headerBottom .easy h2 {
-  font-size: clamp(3rem, 2vw, 5rem);
+/* ================================================================= */
+
+/* FORM */
+
+/* ================================================================= */
+
+.form{
+  padding: 40px 0 40px 0;
 }
 
 .coloursSelection .flexContainer {
   justify-content: space-between;
+  padding: 40px 0 40px 0;
 }
 .coloursSelection legend {
-  border: 1px solid black;
   width: 100%;
-  padding-left: 50px;
+  text-align: right;
 }
-.coloursSelection .flexContainerDesert {
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!GREEN!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.flexContainerGreen {
   display: flex;
   position: relative;
 }
-.coloursSelection .flexContainerDesert input[type=radio] {
+.flexContainerGreen input[type=radio] {
   position: absolute;
   width: 90%;
   height: 90%;
-  opacity: 1;
+  opacity: 0;
 }
-.coloursSelection .flexContainerDesert label {
+.flexContainerGreen label {
+  color: rgb(100, 167, 141);
   display: inline-block;
-  background-color: #ddd;
+  /* background-color: antiquewhite; */
   padding: 10px 20px;
-  border: 2px solid #444;
-  border-radius: 4px;
+  border: 3px solid rgb(100, 167, 141);
+  /* border-radius: 4px; */
 }
-.coloursSelection .flexContainerDesert input[type=radio]:checked + label:checked {
+.flexContainerGreen input[type=radio]:checked + label:checked {
   background-color: #bfb;
   border-color: #4c4;
 }
-.coloursSelection .flexContainerDesert input[type=radio]:focus + label,
-.coloursSelection .flexContainerDesert input[type=radio]:hover + label {
+.flexContainerGreen input[type=radio]:focus + label,
+.flexContainerGreen input[type=radio]:hover + label {
   border: 2px dashed #444;
   cursor: pointer;
-}/*# sourceMappingURL=index.css.map */
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!ORANGE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.flexContainerOrange {
+  display: flex;
+  position: relative;
+}
+.flexContainerOrange input[type=radio] {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  opacity: 0;
+}
+.flexContainerOrange label {
+  color: orange;
+  display: inline-block;
+  /* background-color: antiquewhite; */
+  padding: 10px 20px;
+  border: 3px solid orange;
+  /* border-radius: 4px; */
+}
+.flexContainerOrange input[type=radio]:checked + label:checked {
+  background-color: #bfb;
+  border-color: #4c4;
+}
+.flexContainerOrange input[type=radio]:focus + label,
+.flexContainerOrange input[type=radio]:hover + label {
+  border: 2px dashed #444;
+  cursor: pointer;
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!BLUE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.flexContainerBlue {
+  display: flex;
+  position: relative;
+}
+.flexContainerBlue input[type=radio] {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  opacity: 0;
+}
+.flexContainerBlue label {
+  color: blue;
+  display: inline-block;
+  /* background-color: antiquewhite; */
+  padding: 10px 20px;
+  border: 3px solid blue;
+  /* border-radius: 4px; */
+}
+.flexContainerBlue input[type=radio]:checked + label:checked {
+  background-color: #bfb;
+  border-color: #4c4;
+}
+.flexContainerBlue input[type=radio]:focus + label,
+.flexContainerBlue input[type=radio]:hover + label {
+  border: 2px dashed #444;
+  cursor: pointer;
+}
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!RED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */.flexContainerRed {
+  display: flex;
+  position: relative;
+}
+.flexContainerRed input[type=radio] {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  opacity: 0;
+}
+.flexContainerRed label {
+  color: red;
+  display: inline-block;
+  /* background-color: antiquewhite; */
+  padding: 10px 20px;
+  border: 3px solid red;
+  /* border-radius: 4px; */
+}
+.flexContainerRed input[type=radio]:checked + label:checked {
+  background-color: #bfb;
+  border-color: #4c4;
+}
+.flexContainerRed input[type=radio]:focus + label,
+.flexContainerRed input[type=radio]:hover + label {
+  border: 2px dashed #444;
+  cursor: pointer;
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!BEIGE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.flexContainerBeige {
+  display: flex;
+  position: relative;
+}
+.flexContainerBeige input[type=radio] {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  opacity: 0;
+}
+.flexContainerBeige label {
+  color: antiquewhite;
+  display: inline-block;
+  /* background-color: antiquewhite; */
+  padding: 10px 20px;
+  border: 3px solid antiquewhite;
+  /* border-radius: 4px; */
+}
+.flexContainerBeige input[type=radio]:checked + label:checked {
+  background-color: #bfb;
+  border-color: #4c4;
+}
+.flexContainerBeige input[type=radio]:focus + label,
+.flexContainerBeige input[type=radio]:hover + label {
+  border: 2px dashed #444;
+  cursor: pointer;
+}

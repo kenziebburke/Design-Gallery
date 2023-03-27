@@ -31,7 +31,7 @@ const ApiInfo = () => {
     //   });
 
 
-// setting a variable with a function that completes the randomizer, adding in the parameter of "num" wich represents out limit aka gallerypicc.legth (the entire info from the api call)
+// setting a variable with a function that completes the randomizer, adding in the parameter of "num" wich represents out limit aka gallerypic.legth (the entire info from the api call)
     const randIntBetween0And = function(num) {
         return Math.floor(Math.random() * num) + 1;
     };

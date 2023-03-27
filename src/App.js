@@ -1,4 +1,4 @@
-import "./index.scss";
+import "./index.css";
 import ApiInfo from "./components/ApiInfo";
 import star from "./assets/star.svg";
 
@@ -31,9 +31,6 @@ function App() {
             </figure>
           </div>
         </div>
-        {/* logo here */}
-        {/* p description  */}
-        {/* another p description */}
       </header>
       <ApiInfo />
     </div>
