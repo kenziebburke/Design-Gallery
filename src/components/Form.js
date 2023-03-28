@@ -96,7 +96,6 @@ const Form = (props) => {
               </div>
             </div>
           </fieldset>
-          {/* the logical && operator its a binary operator it takes an operator on either side infact it takes an espression on each side, if the value on the left had side is true it will evaluate to the expression on the right hand side of the operator... if the expression on the left hand side is false it will evaluste to false */}
           {renderColorError && (
             <div className="colorError">
               <p>Please indicate your colour selection.</p>
