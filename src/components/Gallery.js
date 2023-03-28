@@ -2,7 +2,11 @@ import Pic from "./Pic.js";
 
 const Gallery = (props) => {
   if (props.currentGallery.length < 0 || props.currentGallery === undefined) {
-    return null;
+    return (
+      <div className="galleryError">
+        <p>Whoops! looks like there might have been an issue with the from submission, please make a new selection for a stunning gallery wall display.</p>
+      </div>
+    )
   }
 
   return (

@@ -1,11 +1,11 @@
 import { useState } from "react";
-
+import cloud from "../assets/cloud.png";
 
 const Form = (props) => {
   const [selectedValueOne, setSelectedValueOne] = useState("");
   const [selectedValueTwo, setSelectedValueTwo] = useState("");
-  const colorError = document.querySelector(".colorError");
-  const numberError = document.querySelector(".numberError");
+  const [renderColorError, setRenderColorError] = useState(false);
+  const [renderNumberError, setRenderNumberError] = useState(false);
 
   const handleSelection = (event) => {
     setSelectedValueOne(event.target.value);
@@ -15,27 +15,30 @@ const Form = (props) => {
     setSelectedValueTwo(event.target.value);
   };
 
-
   return (
     <section className="form">
       <div className="wrapper">
         <form
           onSubmit={(event) => {
             event.preventDefault();
-            if (!selectedValueOne){
-              colorError.style.display = 'block';
-              return; 
-            }
-            if(!selectedValueTwo){
-              numberError.style.display = 'block';
-              return; 
-            }
-            else if(!selectedValueOne && !selectedValueTwo){
-              colorError.style.display = 'block';
-              numberError.style.display = 'block';
+            if (!selectedValueOne && !selectedValueTwo) {
+              setRenderColorError(true);
+              setRenderNumberError(true);
               return;
             }
-            props.handleSubmit(event, selectedValueOne, selectedValueTwo);
+            if (!selectedValueOne) {
+              setRenderColorError(true);
+              return;
+            }
+            if (!selectedValueTwo) {
+              setRenderNumberError(true);
+              return;
+            }
+            if(selectedValueOne && selectedValueTwo){
+              setRenderColorError(false);
+              setRenderNumberError(false);
+              props.handleSubmit(event, selectedValueOne, selectedValueTwo);
+            }
           }}
         >
           <fieldset
@@ -78,12 +81,7 @@ const Form = (props) => {
               </div>
 
               <div className="flexContainerRed">
-                <input 
-                type="radio" 
-                name="color" 
-                id="red" 
-                value="YW1V-v78Bck" 
-                />
+                <input type="radio" name="color" id="red" value="YW1V-v78Bck" />
                 <label htmlFor="red">Red</label>
               </div>
 
@@ -98,9 +96,15 @@ const Form = (props) => {
               </div>
             </div>
           </fieldset>
-          <div className="colorError">
-            <p>please indicate colour selection.</p>
-          </div>
+          {/* the logical && operator its a binary operator it takes an operator on either side infact it takes an espression on each side, if the value on the left had side is true it will evaluate to the expression on the right hand side of the operator... if the expression on the left hand side is false it will evaluste to false */}
+          {renderColorError && (
+            <div className="colorError">
+              <p>Please indicate your colour selection.</p>
+              <figure>
+                <img src={cloud} alt="Outline of a drawing of a cloud" />
+              </figure>
+            </div>
+          )}
 
           <fieldset
             className="numberOfPics"
@@ -108,9 +112,7 @@ const Form = (props) => {
             onChange={handleSelectionTwo}
             required={true}
           >
-            <legend>
-              Choose the number of pieces desired for your space.
-            </legend>
+            <legend>Choose the number of pieces desired for your space.</legend>
             <div className="flexContainer">
               <div className="flexContainerTwo">
                 <input type="radio" name="number" value={2} id="two" />
@@ -133,16 +135,22 @@ const Form = (props) => {
               </div>
             </div>
           </fieldset>
-          <div className="numberError">
-            <p>please indicate number of pieces generated</p>
-          </div>
+          {renderNumberError && (
+            <div className="numberError">
+              <p>Please indicate the desired number of pieces to generate</p>
+              <figure>
+                <img src={cloud} alt="Outline of a drawing of a cloud" />
+              </figure>
+            </div>
+          )}
+
           <button type="submit">
-          <span className="s">S</span>   <span className="u">U</span> <span className="b">B</span> <span className="m">M</span> <span className="i">I</span> <span className="t">T</span>
+            <span className="s">S</span> <span className="u">U</span>{" "}
+            <span className="b">B</span> <span className="m">M</span>{" "}
+            <span className="i">I</span> <span className="t">T</span>
           </button>
         </form>
       </div>
-
-
     </section>
   );
 };

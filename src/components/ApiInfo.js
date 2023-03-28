@@ -2,7 +2,6 @@ import { useState } from "react";
 import Form from "./Form";
 import Gallery from "./Gallery";
 import axios from "axios";
-import { render } from "@testing-library/react";
 
 
 const ApiInfo = () => {
@@ -23,24 +22,22 @@ const ApiInfo = () => {
 
 
 // setting a variable with a function that completes the randomizer, adding in the parameter of "num" which represents our limit aka galleryPic.length (the entire info from the api call)
-    const randIntBetween0And = function(num) {
+    const randomInteger = function(num) {
         return Math.floor(Math.random() * num) + 1;
     };
     
-    // empty array to push info to 
     const randomIndexes = [];
     
-    // for loop that loops the picNumber ex user selects 4 it iterates 0 1 2 3 then exits the loop 
     for (let i = 0; i < Number(picNumber); i++) {
         // setting a variable to to hold the random number 
-        let random_number = randIntBetween0And(galleryPics.length - 1);
+        let randomNumber = randomInteger(galleryPics.length - 1);
         // check if random indexes contains the same random number we just generated
-        while (randomIndexes.includes(random_number)) {
+        while (randomIndexes.includes(randomNumber)) {
             // reroll the dice generate a new number until it is unique at which point the while loop is exited because its conditions is no longer met 
-            random_number = randIntBetween0And(galleryPics.length - 1);
+            randomNumber = randomInteger(galleryPics.length - 1);
         }
         // putting the indexes into the array 
-        randomIndexes.push(random_number);
+        randomIndexes.push(randomNumber);
     }
 
       // mapping through the randomIndex array and at each index of the randomGalleryPics array we are assigning the galleryPic object at that index value
