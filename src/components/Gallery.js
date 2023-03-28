@@ -7,7 +7,8 @@ const Gallery = (props) => {
 
   return (
     <section className="gallery">
-        <ul className={`galleryUl flexContainer gallery${props.currentGallery.length}`}>
+      <div className="wrapper">
+      <ul className={`galleryUl flexContainer gallery${props.currentGallery.length}`}>
           {props.currentGallery.map((pic, i) => {
             return (
               <Pic
@@ -19,6 +20,7 @@ const Gallery = (props) => {
             );
           })}
         </ul>
+      </div>
     </section>
   );
 };

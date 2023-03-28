@@ -315,8 +315,7 @@ label{
 /* HEADER */
 
 /* ================================================================= */
-
-header {
+.appTop{
   padding-top: 50px;
 }
 .logo {
@@ -327,6 +326,9 @@ header {
 }
 .logo .designLogo {
   display: block;
+}
+.logo:visited{
+  color: #fdfbf5;
 }
 header h1 {
   padding: 40px 0 60px 0;
@@ -664,5 +666,193 @@ form button{
   border-bottom: 3px solid orange;
   border-left: 3px solid rgb(52, 114, 90);
   text-transform: uppercase;
+}
+
+/* ================================================================= */
+
+/* GALLERY */
+
+/* ================================================================= */
+.gallery{
+  padding: 80px 0;
+  min-height: 100vh;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!USER SELECTION 2!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.gallery2{
+  justify-content: space-between;
+}
+
+.gallery2 .pic1 figure,
+.gallery2 .pic2 figure{
+  border: 2px solid antiquewhite;
+}
+
+.gallery2 .pic1 img,
+.gallery2 .pic2 img{
+  padding: 5px;
+}
+
+.gallery2 .pic1{
+  flex-basis: 45%;
+  margin-right: 5%;
+}
+.gallery2 .pic2{
+  padding-top: 80px;
+  flex-basis: 50%;
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!USER SELECTION 3!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.gallery3{
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.gallery3 .pic1 figure,
+.gallery3 .pic2 figure,
+.gallery3 .pic3 figure{
+  border: 2px solid antiquewhite;
+}
+
+.gallery3 .pic1 img,
+.gallery3 .pic2 img,
+.gallery3 .pic3 img{
+  padding: 5px;
+}
+
+.gallery3 .pic1{
+  flex-basis: 30%;
+  min-width: 80px;
+}
+
+.gallery3 .pic2{
+  flex-basis: 30%;
+  padding: 0 5%;
+  min-width: 90px;
+}
+
+.gallery3 .pic3{
+  flex-basis: 30%;
+  padding-top: 10%;
+  min-width: 90px;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!USER SELECTION 4!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.gallery4{
+  flex-wrap: wrap;
+}
+.gallery4 .pic1 figure,
+.gallery4 .pic2 figure,
+.gallery4 .pic3 figure,
+.gallery4 .pic4 figure{
+  border: 2px solid antiquewhite;
+}
+
+.gallery4 .pic1 img,
+.gallery4 .pic2 img,
+.gallery4 .pic3 img,
+.gallery4 .pic4 img{
+  padding: 5px;
+}
+
+
+
+.gallery4 .pic1{
+  flex-basis: 44%;
+  margin: 0 1.5% 2% 1.5%;
+}
+
+.gallery4 .pic2{
+  flex-basis: 44%;
+  margin: 2% 1.5%;
+  position: relative;
+  top: -30px;
+}
+
+
+.gallery4 .pic3{
+  flex-basis: 44%;
+  margin: 2% 1.5%;
+  position: relative;
+  top: 60px;
+  right: 30px;
+}
+
+
+.gallery4 .pic4{
+  flex-basis: 44%;
+  margin: 2% 1.5%;
+  position: relative;
+  top: -40px;
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!USER SELECTION 5!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.gallery5{
+  flex-wrap: wrap;
+}
+.gallery5 .pic1 figure,
+.gallery5 .pic2 figure,
+.gallery5 .pic3 figure,
+.gallery5 .pic4 figure,
+.gallery5 .pic5 figure{
+  border: 2px solid antiquewhite;
+}
+
+.gallery5 .pic1 img,
+.gallery5 .pic2 img,
+.gallery5 .pic3 img,
+.gallery5 .pic4 img,
+.gallery5 .pic5 img{
+  padding: 5px;
+}
+
+
+
+.gallery5 .pic1{
+  flex-basis: 30%;
+  margin: 0 1.5% 2% 1.5%;
+}
+
+.gallery5 .pic2{
+  flex-basis: 30%;
+  margin: 2% 1.5%;
+  position: relative;
+  top: -30px;
+}
+
+
+.gallery5 .pic3{
+  flex-basis: 30%;
+  margin: 2% 1.5%;
+  position: relative;
+  top: 60px;
+  right: 30px;
+}
+
+
+.gallery5 .pic4{
+  flex-basis: 44%;
+  margin: 2% 1.5%;
+  position: relative;
+  top: -40px;
+}
+
+.gallery5 .pic5{
+  flex-basis: 44%;
+  margin: 2% 1.5%;
+  position: relative;
+  top: -40px;
+}
+
+/* ================================================================= */
+
+/* FOOTER */
+
+/* ================================================================= */
+footer p{
+  color: #000;
+  background-color: #fdfbf5;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px 0;
 }
 
