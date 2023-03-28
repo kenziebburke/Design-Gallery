@@ -229,7 +229,7 @@ html {
 /* ================================================================= */
 
 html {
-  background-image: url(/src/assets/background.jpg);
+  background-image: url(/assets/background.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -547,6 +547,13 @@ header .headerBottom figure img {
   border: 3px solid antiquewhite;
 }
 
+/* error form top */
+.colorError{
+  color: #000;
+  background-color: #fdfbf5;
+  display: none;
+}
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!FORM BOTTOM!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .numberOfPics legend {
   width: 100%;
@@ -654,6 +661,12 @@ header .headerBottom figure img {
   cursor: pointer;
 }
 
+/* error form bottom */
+.numberError{
+  color: #000;
+  background-color: #fdfbf5;
+  display: none;
+}
 
 form button{
   position: relative;
@@ -666,6 +679,35 @@ form button{
   border-bottom: 3px solid orange;
   border-left: 3px solid rgb(52, 114, 90);
   text-transform: uppercase;
+}
+
+button span{
+  transition: all 0.5s ease;
+}
+
+form button:hover .s{
+    color: red;
+    font-size: clamp(1rem, 2vw, 1.8rem);
+}
+form button:hover .u{
+  color: blue;
+  font-size: clamp(1rem, 2vw, 1.8rem);
+}
+form button:hover .b{
+  color: orange;
+  font-size: clamp(1rem, 2vw, 1.8rem);
+}
+form button:hover .m{
+  color: rgb(52, 114, 90);
+  font-size: clamp(1rem, 2vw, 1.8rem);
+}
+form button:hover .i{
+  color: blue;
+  font-size: clamp(1rem, 2vw, 1.8rem);
+}
+form button:hover .t{
+  color: red;
+  font-size: clamp(1rem, 2vw, 1.8rem);
 }
 
 /* ================================================================= */

@@ -4,6 +4,8 @@ import { useState } from "react";
 const Form = (props) => {
   const [selectedValueOne, setSelectedValueOne] = useState("");
   const [selectedValueTwo, setSelectedValueTwo] = useState("");
+  const colorError = document.querySelector(".colorError");
+  const numberError = document.querySelector(".numberError");
 
   const handleSelection = (event) => {
     setSelectedValueOne(event.target.value);
@@ -13,13 +15,26 @@ const Form = (props) => {
     setSelectedValueTwo(event.target.value);
   };
 
-  // add error handeling here
 
   return (
     <section className="form">
       <div className="wrapper">
         <form
           onSubmit={(event) => {
+            event.preventDefault();
+            if (!selectedValueOne){
+              colorError.style.display = 'block';
+              return; 
+            }
+            if(!selectedValueTwo){
+              numberError.style.display = 'block';
+              return; 
+            }
+            else if(!selectedValueOne && !selectedValueTwo){
+              colorError.style.display = 'block';
+              numberError.style.display = 'block';
+              return;
+            }
             props.handleSubmit(event, selectedValueOne, selectedValueTwo);
           }}
         >
@@ -83,11 +98,15 @@ const Form = (props) => {
               </div>
             </div>
           </fieldset>
+          <div className="colorError">
+            <p>please indicate colour selection.</p>
+          </div>
 
           <fieldset
             className="numberOfPics"
             value={selectedValueOne}
             onChange={handleSelectionTwo}
+            required={true}
           >
             <legend>
               Choose the number of pieces desired for your space.
@@ -114,11 +133,16 @@ const Form = (props) => {
               </div>
             </div>
           </fieldset>
+          <div className="numberError">
+            <p>please indicate number of pieces generated</p>
+          </div>
           <button type="submit">
-          Submit    
+          <span className="s">S</span>   <span className="u">U</span> <span className="b">B</span> <span className="m">M</span> <span className="i">I</span> <span className="t">T</span>
           </button>
         </form>
       </div>
+
+
     </section>
   );
 };

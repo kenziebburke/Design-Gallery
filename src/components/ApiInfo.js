@@ -2,6 +2,7 @@ import { useState } from "react";
 import Form from "./Form";
 import Gallery from "./Gallery";
 import axios from "axios";
+import { render } from "@testing-library/react";
 
 
 const ApiInfo = () => {
@@ -51,8 +52,7 @@ const ApiInfo = () => {
   };
 
   const userSelection = (event, selectedOne, selectedTwo) => {
-    event.preventDefault();
-    getRandomGalleryPic(selectedTwo, selectedOne);
+      getRandomGalleryPic(selectedTwo, selectedOne);
   };
 
 
