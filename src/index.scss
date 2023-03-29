@@ -315,6 +315,10 @@ label{
 /* HEADER */
 
 /* ================================================================= */
+header{
+  min-height: 100vh;
+}
+
 .logo {
   font-family: "Varta", sans-serif;
   font-weight: bold;
@@ -336,7 +340,7 @@ header h1 {
 }
 .headerBottom {
   border-top: 2px solid #fdfbf5;
-  padding: 40px 0 40px 0;
+  padding: 80px 0 40px 0;
   align-items: center;
 }
 .headerBottom p {
@@ -559,7 +563,6 @@ header .headerBottom figure img {
   text-transform: uppercase;
   width: 250px;
   text-align: center;
-
 }
 .colorError figure{
   width: 450px;
@@ -693,7 +696,6 @@ header .headerBottom figure img {
   text-transform: uppercase;
   width: 250px;
   text-align: center;
-
 }
 .numberError figure{
   width: 450px;
@@ -722,27 +724,35 @@ button span{
   transition: all 0.5s ease;
 }
 
-form button:hover .s{
+form button:hover .s,
+form button:focus .s
+{
     color: red;
     font-size: clamp(1rem, 2vw, 1.8rem);
 }
-form button:hover .u{
+form button:hover .u,
+form button:focus .u{
   color: blue;
   font-size: clamp(1rem, 2vw, 1.8rem);
 }
-form button:hover .b{
+form button:hover .b,
+form button:focus .b{
   color: orange;
   font-size: clamp(1rem, 2vw, 1.8rem);
 }
-form button:hover .m{
+form button:hover .m,
+form button:focus .m{
   color: rgb(52, 114, 90);
   font-size: clamp(1rem, 2vw, 1.8rem);
 }
-form button:hover .i{
+form button:hover .i,
+form button:focus .i{
   color: blue;
   font-size: clamp(1rem, 2vw, 1.8rem);
 }
-form button:hover .t{
+form button:hover .t,
+form button:focus .t
+{
   color: red;
   font-size: clamp(1rem, 2vw, 1.8rem);
 }
@@ -754,6 +764,19 @@ form button:hover .t{
 /* ================================================================= */
 .gallery{
   padding: 80px 0;
+  min-height: 100vh;
+}
+.emptyGallery{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emptyGallery p{
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 2vw, 4rem);
+
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!USER SELECTION 2!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -784,7 +807,9 @@ form button:hover .t{
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!USER SELECTION 3!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .gallery3{
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  height: 90vh;
 }
 .gallery3 .pic1 figure,
 .gallery3 .pic2 figure,
@@ -837,12 +862,12 @@ form button:hover .t{
 
 .gallery4 .pic1{
   flex-basis: 44%;
-  margin: 0 1.5% 2% 1.5%;
+  margin: 0 3% 2% 0;
 }
 
 .gallery4 .pic2{
   flex-basis: 44%;
-  margin: 2% 1.5%;
+  margin: 2% 0 2% 3%;
   position: relative;
   top: -30px;
 }
@@ -850,7 +875,7 @@ form button:hover .t{
 
 .gallery4 .pic3{
   flex-basis: 44%;
-  margin: 2% 1.5%;
+  margin: 2% 1.5% 2% 0;
   position: relative;
   top: 60px;
   right: 30px;
@@ -900,10 +925,9 @@ form button:hover .t{
 
 .gallery5 .pic3{
   flex-basis: 30%;
-  margin: 2% 1.5%;
+  margin: 2% 2%;
   position: relative;
   top: 60px;
-  right: 30px;
 }
 
 
@@ -918,7 +942,7 @@ form button:hover .t{
   flex-basis: 44%;
   margin: 2% 1.5%;
   position: relative;
-  top: -40px;
+  top: 100px;
 }
 
 /* ================================================================= */
@@ -934,3 +958,137 @@ footer p{
   padding: 10px 0;
 }
 
+/* ================================================================= */
+
+/* MEDIA QUERIES */
+
+/* ================================================================= */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1200!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+@media (max-width:1200px){
+  .gallery5{
+    padding-bottom: 40px;
+  }
+  .gallery5 .pic4{
+    margin: 4% 1.5%;
+  }
+  .colorError p{
+    left: 9%;
+  }
+  .numberError p{
+    left: 9%;
+  }
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!900!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+@media(max-width:900px){
+  form button{
+    left: 81%;
+  }
+  .colorError p{
+    left: 12%;
+    top: 115px;
+  }
+  .numberError p{
+    left: 12%;
+    top: 110px;
+  }
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!700!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+@media(max-width:800px){
+  header{
+    min-height: 0;
+  }
+  form button{
+    left: 79%;
+  }
+  .colorError p{
+    left: 13%;
+    top: 115px;
+  }
+  .numberError p{
+    left: 14%;
+    top: 110px;
+    width: 230px;
+  }
+  .gallery{
+    min-height: 70vh;
+  }
+  .emptyGallery{
+    height: 70vh;
+  }
+  .gallery3 .pic1{
+    flex-basis: 45%;
+  }
+  
+  .gallery3 .pic2{
+    flex-basis: 45%;
+  }
+  
+  .gallery3 .pic3{
+    flex-basis: 45%;
+    padding-top: 2%;
+  }
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!600!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+@media(max-width:600px){
+  form button{
+    left: 70%;
+  }
+  .colorError p{
+    left: 20%;
+    top: 100px;
+  }
+  .numberError p{
+    left: 20%;
+    top: 95px;
+  }
+  .gallery5 .pic4{
+    top: 0;
+  }
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!450!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+@media(max-width:450px){
+  header h1 {
+    width: 80%;
+  }
+  .headerBottom .left {
+    flex-basis: 70%;
+    margin-right: 5%;
+  }
+  .headerBottom figure {
+    flex-basis: 15%;
+    margin-left: 10%;
+  }
+  form button{
+    left: 62%;
+  }
+  .colorError p{
+    left: 15%;
+    top: 80px;
+  }
+  .numberError p{
+    left: 18%;
+    top: 75px;
+  }
+  
+  .gallery3 .pic3{
+    flex-basis: 70%;
+    position: relative;
+    top: -50px;
+  }
+  .gallery4 .pic3{
+    top: 0;
+    right: 0;
+  }
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!370!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+@media(max-width:370px){
+  form button{
+    left: 50%;
+  }
+}

@@ -1,18 +1,23 @@
 import Pic from "./Pic.js";
 
 const Gallery = (props) => {
-  if (props.currentGallery.length < 0 || props.currentGallery === undefined) {
+  console.log(props.currentGallery.length);
+  if (props.currentGallery.length <= 0 || props.currentGallery === undefined) {
     return (
-      <div className="galleryError">
-        <p>Whoops! looks like there might have been an issue with the from submission, please make a new selection for a stunning gallery wall display.</p>
-      </div>
-    )
+      <section className="gallery">
+        <div className="emptyGallery">
+          <p>Your gallery awaits.</p>
+        </div>
+      </section>
+    );
   }
 
   return (
     <section className="gallery">
       <div className="wrapper">
-      <ul className={`galleryUl flexContainer gallery${props.currentGallery.length}`}>
+        <ul
+          className={`galleryUl flexContainer gallery${props.currentGallery.length}`}
+        >
           {props.currentGallery.map((pic, i) => {
             return (
               <Pic
