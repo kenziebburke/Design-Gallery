@@ -42,8 +42,6 @@ const ApiInfo = () => {
       getRandomGalleryPic(selectedTwo, selectedOne);
   };
 
-
-  // define this function give it a parameter called index
   const userRequestsImageChange = (indexToChange) => {
     let randomNumber = randomInteger(userPicChange.length - 1);
     while (randomIndexes.includes(randomNumber)) {
@@ -55,11 +53,25 @@ const ApiInfo = () => {
     });
     setDisplayedPics(randomGalleryPics)
   }
+
+  const errorUserSelection = () => {
+    if (displayedPics !== null || displayedPics !== undefined){
+      userSelection((event)=>{
+        event.preventDefault();
+        return false;
+      })
+    }
+    return(
+      <div className="errorUserSelection">
+        <p>If you wish to re-enter your preferences please refresh the page and resubmit the form!</p>
+      </div>
+    )
+  }
+
   
   return (
     <main>
-      <Form handleSubmit={userSelection} />
-      {/* pass the user request function down so the child can reference and run the function, data that travels in one direction is easier to follow */}
+      <Form handleSubmit={userSelection} errorHandleSubmit={errorUserSelection}/>
       <Gallery currentGallery={displayedPics} userRequestsImageChange={userRequestsImageChange}/>
     </main>
   );

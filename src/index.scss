@@ -779,6 +779,21 @@ form button:focus .t
 
 }
 
+.refresh{
+  margin-top: 10px;
+  border-radius: 50%;
+  border: 0;
+  padding: .1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.refresh img{
+  height: 110%;
+  width: 110%;
+}
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!USER SELECTION 2!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .gallery2{
   justify-content: space-between;
@@ -993,6 +1008,11 @@ footer p{
     left: 12%;
     top: 110px;
   }
+  .refresh{ 
+    height: 40px;
+    width: 40px;
+  }
+  
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!700!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -1074,6 +1094,14 @@ footer p{
     left: 18%;
     top: 75px;
   }
+
+  .refresh{ 
+    height: 30px;
+    width: 30px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
   
   .gallery3 .pic3{
     flex-basis: 70%;
