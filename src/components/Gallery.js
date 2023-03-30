@@ -1,7 +1,8 @@
 import Pic from "./Pic.js";
 
+
 const Gallery = (props) => {
-  console.log(props.currentGallery.length);
+
   if (props.currentGallery.length <= 0 || props.currentGallery === undefined) {
     return (
       <section className="gallery">
@@ -25,6 +26,8 @@ const Gallery = (props) => {
                 photoUrl={pic.urls.regular}
                 altText={pic.alt_description}
                 className={`pic${i + 1}`}
+                userRequestsImageChange={props.userRequestsImageChange}
+                indexNumber={i}
               />
             );
           })}

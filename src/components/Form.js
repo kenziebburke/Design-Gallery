@@ -39,6 +39,9 @@ const Form = (props) => {
               setRenderNumberError(false);
               props.handleSubmit(event, selectedValueOne, selectedValueTwo);
             }
+            if(selectedValueOne && selectedValueTwo){
+              props.errorHandleSubmit(event)
+            }
           }}
         >
           <fieldset
