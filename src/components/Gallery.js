@@ -1,7 +1,9 @@
 import Pic from "./Pic.js";
+import { useState } from "react";
 
 const Gallery = (props) => {
-  console.log(props.currentGallery.length);
+
+
   if (props.currentGallery.length <= 0 || props.currentGallery === undefined) {
     return (
       <section className="gallery">
@@ -25,6 +27,9 @@ const Gallery = (props) => {
                 photoUrl={pic.urls.regular}
                 altText={pic.alt_description}
                 className={`pic${i + 1}`}
+                // passing down the reference of the function in the api call to the pic so that we can recieve the proper img index to change on click
+                userRequestsImageChange={props.userRequestsImageChange}
+                indexNumber={i}
               />
             );
           })}
