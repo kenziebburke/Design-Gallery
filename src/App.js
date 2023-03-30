@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "./index.scss";
+import ApiInfo from "./components/ApiInfo";
+import Footer from "./components/Footer"
+import star from "./assets/star.svg";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <div className="wrapper">
+          <p className="logo">
+            <span className="designLogo">Design</span> <span>Gallery</span>
+          </p>
+          <h1>Design made easy.</h1>
+          <div className="headerBottom flexContainer">
+            <div className="left">
+              <p>
+                Hey there, welcome to the Design Gallery! The perfect solution
+                for anyone who wants to create a <strong>stunning</strong> wall
+                art display without the hassle.
+              </p>
+              <p>
+                Get started today and create a gallery wall that'll make your
+                friends and family envious!
+              </p>
+            </div>
+            <figure>
+              <img
+                src={star}
+                alt="Icon of a simple for sided star, similar to a diamond but with the sides curving in."
+              />
+            </figure>
+          </div>
+        </div>
       </header>
+      <ApiInfo />
+      <Footer/>
     </div>
   );
 }
