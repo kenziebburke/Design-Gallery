@@ -12,6 +12,7 @@ const randomInteger = function(num) {
 const ApiInfo = () => {
   const [displayedPics, setDisplayedPics] = useState([]);
   const [userPicChange, setUserPicChange] = useState([]);
+  const [showGallery, setShowGallery] = useState(false);
 
   const getRandomGalleryPic = (picNumber, picColor = "NU2mT-5c8_4") => {
     axios({
@@ -40,6 +41,8 @@ const ApiInfo = () => {
 
   const userSelection = (event, selectedOne, selectedTwo) => {
       getRandomGalleryPic(selectedTwo, selectedOne);
+      showGallery(true)
+      console.log(selectedTwo, selectedOne)
   };
 
   const userRequestsImageChange = (indexToChange) => {
@@ -71,11 +74,16 @@ const ApiInfo = () => {
 
 
   // add auto scroll react library npm auto scroll or usereff or add it to the css 
+  // refactre the code so that api info 
+  // rather than return we 
   
   return (
     <main>
+      {showGallery
+      ? <Gallery currentGallery={displayedPics} userRequestsImageChange={userRequestsImageChange}/>
+      : null
+      }
       <Form handleSubmit={userSelection} errorHandleSubmit={errorUserSelection}/>
-      <Gallery currentGallery={displayedPics} userRequestsImageChange={userRequestsImageChange}/>
     </main>
   );
 };

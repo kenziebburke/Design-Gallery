@@ -1,5 +1,6 @@
 import { useState } from "react";
 import cloud from "../assets/cloud.png";
+import { Link } from "react-router-dom";
 
 const Form = (props) => {
   const [selectedValueOne, setSelectedValueOne] = useState("");
@@ -147,9 +148,11 @@ const Form = (props) => {
           )}
 
           <button type="submit">
+            {/* <Link to="/gallery"> */}
             <span className="s">S</span> <span className="u">U</span>{" "}
             <span className="b">B</span> <span className="m">M</span>{" "}
             <span className="i">I</span> <span className="t">T</span>
+            {/* </Link> */}
           </button>
         </form>
       </div>

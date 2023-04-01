@@ -1,39 +1,23 @@
 import "./index.scss";
-import ApiInfo from "./components/ApiInfo";
 import Footer from "./components/Footer"
-import star from "./assets/star.svg";
+import LandingPage from "./components/LandingPage";
+import Form from "./components/Form";
+import Gallery from "./components/Gallery";
+import { Routes, Route} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <div className="wrapper">
-          <p className="logo">
+      <Routes>
+        <Route path="/" element={<LandingPage/>}/>
+        <Route path="/form" element={<Form/>}/>
+        <Route path="/gallery" element={<Gallery/>}/>
+      </Routes>
+      {/* <>
+      <p className="logo">
             <span className="designLogo">Design</span> <span>Gallery</span>
           </p>
-          <h1>Design made easy.</h1>
-          <div className="headerBottom flexContainer">
-            <div className="left">
-              <p>
-                Hey there, welcome to the Design Gallery! The perfect solution
-                for anyone who wants to create a <strong>stunning</strong> wall
-                art display without the hassle.
-              </p>
-              <p>
-                Get started today and create a gallery wall that'll make your
-                friends and family envious!
-              </p>
-            </div>
-            <figure>
-              <img
-                src={star}
-                alt="Icon of a simple for sided star, similar to a diamond but with the sides curving in."
-              />
-            </figure>
-          </div>
-        </div>
-      </header>
-      <ApiInfo />
+      </> */}
       <Footer/>
     </div>
   );
