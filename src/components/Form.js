@@ -1,8 +1,10 @@
 import { useState } from "react";
 import cloud from "../assets/cloud.png";
-import { Link } from "react-router-dom";
+import { useApi } from "./ApiInfo.js";
 
-const Form = (props) => {
+const Form = () => {
+
+  const { handleSubmit } = useApi();
   const [selectedValueOne, setSelectedValueOne] = useState("");
   const [selectedValueTwo, setSelectedValueTwo] = useState("");
   const [renderColorError, setRenderColorError] = useState(false);
@@ -35,13 +37,10 @@ const Form = (props) => {
               setRenderNumberError(true);
               return;
             }
-            if(selectedValueOne && selectedValueTwo){
+            if (selectedValueOne && selectedValueTwo) {
               setRenderColorError(false);
               setRenderNumberError(false);
-              props.handleSubmit(event, selectedValueOne, selectedValueTwo);
-            }
-            if(selectedValueOne && selectedValueTwo){
-              props.errorHandleSubmit(event)
+              handleSubmit(event, selectedValueOne, selectedValueTwo);
             }
           }}
         >
@@ -100,6 +99,7 @@ const Form = (props) => {
               </div>
             </div>
           </fieldset>
+
           {renderColorError && (
             <div className="colorError">
               <p>Please indicate your colour selection.</p>
@@ -138,26 +138,28 @@ const Form = (props) => {
               </div>
             </div>
           </fieldset>
-          {renderNumberError && (
+
+          {renderNumberError ? (
             <div className="numberError">
               <p>Please indicate the desired number of pieces to generate</p>
               <figure>
                 <img src={cloud} alt="Outline of a drawing of a cloud" />
               </figure>
             </div>
-          )}
+          ) : ""
+          }
 
-          <button type="submit">
-            {/* <Link to="/gallery"> */}
-            <span className="s">S</span> <span className="u">U</span>{" "}
-            <span className="b">B</span> <span className="m">M</span>{" "}
-            <span className="i">I</span> <span className="t">T</span>
-            {/* </Link> */}
+            <button>
+                <span className="s">S</span> <span className="u">U</span>{" "}
+                <span className="b">B</span> <span className="m">M</span>{" "}
+                <span className="i">I</span> <span className="t">T</span>
           </button>
         </form>
       </div>
     </section>
   );
 };
+
+// fix media queries for form bcc they r silly 
 
 export default Form;

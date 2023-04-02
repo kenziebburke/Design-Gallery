@@ -1,24 +1,22 @@
 import "./index.scss";
+import Nav from "./components/Nav";
 import Footer from "./components/Footer"
 import LandingPage from "./components/LandingPage";
-import Form from "./components/Form";
-import Gallery from "./components/Gallery";
-import { Routes, Route} from "react-router-dom";
+import Next from "./components/Next";
+import { ApiInfo } from "./components/ApiInfo";
+import { Routes, Route,} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<LandingPage/>}/>
-        <Route path="/form" element={<Form/>}/>
-        <Route path="/gallery" element={<Gallery/>}/>
-      </Routes>
-      {/* <>
-      <p className="logo">
-            <span className="designLogo">Design</span> <span>Gallery</span>
-          </p>
-      </> */}
-      <Footer/>
+      <Nav/>
+      <ApiInfo>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/next" element={<Next />} />
+        </Routes>
+      </ApiInfo>
+      <Footer />
     </div>
   );
 }

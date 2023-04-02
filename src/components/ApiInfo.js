@@ -1,49 +1,59 @@
-import { useState } from "react";
-import Form from "./Form";
-import Gallery from "./Gallery";
+import { createContext, useContext, useState } from "react";
 import axios from "axios";
 
-const randomIndexes = [];
+const ApiContext = createContext();
 
-const randomInteger = function(num) {
+// const initialPicturesState = []
+
+let randomIndexes = [];
+
+const randomInteger = function (num) {
   return Math.floor(Math.random() * num) + 1;
 };
 
-const ApiInfo = () => {
+
+export function ApiInfo({ children }) {
+
   const [displayedPics, setDisplayedPics] = useState([]);
   const [userPicChange, setUserPicChange] = useState([]);
+
   const [showGallery, setShowGallery] = useState(false);
 
-  const getRandomGalleryPic = (picNumber, picColor = "NU2mT-5c8_4") => {
-    axios({
-      url: `https://api.unsplash.com/collections/${picColor}/photos`,
-      params: {
-        per_page: 50,
-        client_id: process.env.REACT_APP_API_KEY
-      },
-    }).then((apiData) => {
-      const galleryPics = apiData.data;
-      setUserPicChange(galleryPics)
-    
-    for (let i = 0; i < Number(picNumber); i++) {
-        let randomNumber = randomInteger(galleryPics.length - 1);
-        while (randomIndexes.includes(randomNumber)) {
-            randomNumber = randomInteger(galleryPics.length - 1);
-        } 
-        randomIndexes.push(randomNumber);
-    }
-      const randomGalleryPics = randomIndexes.map((index) => {
-        return galleryPics[index];
-      });
-      setDisplayedPics(randomGalleryPics)
-    })
+  const handleSubmit = (event, selectedOne, selectedTwo) => {
+    event.preventDefault();
+    getRandomGalleryPic(selectedTwo, selectedOne);
+    setShowGallery(true);
   };
 
-  const userSelection = (event, selectedOne, selectedTwo) => {
-      getRandomGalleryPic(selectedTwo, selectedOne);
-      showGallery(true)
-      console.log(selectedTwo, selectedOne)
-  };
+  const handleHomeReload = () => {
+    randomIndexes = []
+    setShowGallery(false);
+  }
+
+    const getRandomGalleryPic = (picNumber, picColor = "NU2mT-5c8_4") => {
+      axios({
+        url: `https://api.unsplash.com/collections/${picColor}/photos`,
+        params: {
+          per_page: 50,
+          client_id: process.env.REACT_APP_API_KEY
+        },
+      }).then((apiData) => {
+        const galleryPics = apiData.data;
+        setUserPicChange(galleryPics);
+
+        for (let i = 0; i < Number(picNumber); i++) {
+          let randomNumber = randomInteger(galleryPics.length - 1);
+          while (randomIndexes.includes(randomNumber)) {
+            randomNumber = randomInteger(galleryPics.length - 1);
+          }
+          randomIndexes.push(randomNumber);
+        }
+        const randomGalleryPics = randomIndexes.map((index) => {
+          return galleryPics[index];
+        });
+        setDisplayedPics(randomGalleryPics);
+      });
+    };
 
   const userRequestsImageChange = (indexToChange) => {
     let randomNumber = randomInteger(userPicChange.length - 1);
@@ -57,35 +67,21 @@ const ApiInfo = () => {
     setDisplayedPics(randomGalleryPics)
   }
 
-  const errorUserSelection = () => {
-    if (displayedPics !== null || displayedPics !== undefined){
-      userSelection((event)=>{
-        event.preventDefault();
-        return false;
-      })
-    }
-    return(
-      <div className="errorUserSelection">
-        <p>If you wish to re-enter your preferences please refresh the page and resubmit the form!</p>
-      </div>
-    )
-  }
-
-
-
-  // add auto scroll react library npm auto scroll or usereff or add it to the css 
-  // refactre the code so that api info 
-  // rather than return we 
-  
   return (
-    <main>
-      {showGallery
-      ? <Gallery currentGallery={displayedPics} userRequestsImageChange={userRequestsImageChange}/>
-      : null
-      }
-      <Form handleSubmit={userSelection} errorHandleSubmit={errorUserSelection}/>
-    </main>
+    <ApiContext.Provider
+      value={{
+        displayedPics,
+        handleSubmit,
+        userRequestsImageChange,
+        showGallery,
+        handleHomeReload
+      }}
+    >
+      {children}
+    </ApiContext.Provider>
   );
 };
 
-export default ApiInfo;
+export function useApi() {
+  return useContext(ApiContext);
+}

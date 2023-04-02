@@ -315,9 +315,6 @@ label{
 /* HEADER */
 
 /* ================================================================= */
-header{
-  min-height: 100vh;
-}
 
 .logo {
   font-family: "Varta", sans-serif;
@@ -325,14 +322,25 @@ header{
   text-transform: uppercase;
   line-height: 0.8rem;
   padding-top: 50px;
+  color: #fdfbf5;
 }
+
 .logo .designLogo {
   display: block;
 }
+
 .logo:visited{
   color: #fdfbf5;
 }
-header h1 {
+
+
+/* ================================================================= */
+
+/* LANDING PAGE */
+
+/* ================================================================= */
+
+.landingPage h1 {
   padding: 40px 0 60px 0;
   font-size: clamp(3rem, 9vw, 8rem);
   width: 70%;
@@ -355,8 +363,63 @@ header h1 {
   flex-basis: 10%;
   margin-left: 8%;
 }
-header .headerBottom figure img {
+.landingPage .headerBottom figure img {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
+.linkToForm{
+  margin-top: 15px;
+  color: #000;
+  background-color: antiquewhite;
+  padding: 10px 20px;
+  border-right: 3px solid red;
+  border-top: 3px solid blue;
+  border-bottom: 3px solid orange;
+  border-left: 3px solid rgb(52, 114, 90);
+  text-transform: uppercase;
+}
+
+.linkToForm span{
+  transition: all 0.5s ease;
+}
+
+.linkToForm:hover .s,
+.linkToForm:focus .s
+{
+    color: red;
+}
+.linkToForm:hover .t,
+.linkToForm:focus .t{
+  color: blue;
+}
+.linkToForm:hover .a,
+.linkToForm:focus .a{
+  color: orange;
+}
+.linkToForm:hover .g,
+.linkToForm:focus .g{
+  color: rgb(52, 114, 90);
+}
+.linkToForm:hover .l,
+.linkToForm:focus .l{
+  color: blue;
+}
+.linkToForm:hover .ll,
+.linkToForm:focus .ll
+{
+  color: red;
+}
+.linkToForm:hover .r,
+.linkToForm:focus .r{
+  color: rgb(52, 114, 90);
+}
+.linkToForm:hover .y,
+.linkToForm:focus .y{
+  color: orange;
+}
+.linkToForm:hover .e,
+.linkToForm:focus .e{
+  color: blue;
 }
 
 /* ================================================================= */
@@ -763,9 +826,12 @@ form button:focus .t
 
 /* ================================================================= */
 .gallery{
-  padding: 80px 0;
-  min-height: 100vh;
+  height: calc(100vh - 126px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .emptyGallery{
   height: 100vh;
   display: flex;
@@ -858,7 +924,11 @@ form button:focus .t
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!USER SELECTION 4!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .gallery4{
   flex-wrap: wrap;
+  max-height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
+
 .gallery4 .pic1 figure,
 .gallery4 .pic2 figure,
 .gallery4 .pic3 figure,
@@ -873,36 +943,37 @@ form button:focus .t
   padding: 5px;
 }
 
-
-
-.gallery4 .pic1{
-  flex-basis: 44%;
-  margin: 0 3% 2% 0;
+.gallery4 .photo-container{
+  flex-basis: 20%;
 }
 
-.gallery4 .pic2{
-  flex-basis: 44%;
-  margin: 2% 0 2% 3%;
+.gallery4 .pic1 {
+  flex-shrink: 2;
+  margin: 0 5% 3% 0;
   position: relative;
-  top: -30px;
+  top: 120px;
+}
+
+.gallery4 .pic2 {
+  margin: 2% 0 2% 10%;
 }
 
 
-.gallery4 .pic3{
-  flex-basis: 44%;
-  margin: 2% 1.5% 2% 0;
+.gallery4 .pic3 {
+  margin: 2% 2% 2% 10%;
   position: relative;
   top: 60px;
   right: 30px;
 }
 
 
-.gallery4 .pic4{
-  flex-basis: 44%;
+.gallery4 .pic4 {
   margin: 2% 1.5%;
   position: relative;
   top: -40px;
 }
+
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!USER SELECTION 5!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .gallery5{
   flex-wrap: wrap;
