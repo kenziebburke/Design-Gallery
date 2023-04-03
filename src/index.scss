@@ -308,6 +308,26 @@ label{
   font-size: clamp(1rem, 2vw, 4rem);
 }
 
+/* ================================================================= */
+
+/* ERROR*/
+
+/* ================================================================= */
+
+.error .wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.error h2{
+  font-size: clamp(3rem, 6vw, 6rem);
+  text-align: center;
+  font-weight: lighter;
+  padding-bottom: 20px;
+}
 
 /* ================================================================= */
 
