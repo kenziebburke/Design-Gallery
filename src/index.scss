@@ -227,7 +227,6 @@ html {
 /* BASE STYLES */
 
 /* ================================================================= */
-
 html {
   background-image: url(/assets/background.jpg);
   background-position: top;
@@ -315,14 +314,13 @@ label{
 /* HEADER */
 
 /* ================================================================= */
-
 .logo {
   font-family: "Varta", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 0.8rem;
-  padding-top: 50px;
   color: #fdfbf5;
+  padding-top: 5%;
 }
 
 .logo .designLogo {
@@ -341,27 +339,29 @@ label{
 /* ================================================================= */
 
 .landingPage h1 {
-  padding: 40px 0 60px 0;
+  padding: 5% 0;
   font-size: clamp(3rem, 9vw, 8rem);
   width: 70%;
   font-weight: lighter;
 }
 .headerBottom {
   border-top: 2px solid #fdfbf5;
-  padding: 80px 0 40px 0;
+  padding: 40px 0 40px 0;
   align-items: center;
 }
 .headerBottom p {
-  padding: 20px 0 10px 0;
+  padding: 10px 0;
   text-transform: uppercase;
 }
 .headerBottom .left {
   flex-basis: 75%;
   margin-right: 5%;
 }
-.headerBottom figure {
-  flex-basis: 10%;
-  margin-left: 8%;
+.headerBottom .right {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .landingPage .headerBottom figure img {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
@@ -371,7 +371,7 @@ label{
   margin-top: 15px;
   color: #000;
   background-color: antiquewhite;
-  padding: 10px 20px;
+  padding: 10px 5px;
   border-right: 3px solid red;
   border-top: 3px solid blue;
   border-bottom: 3px solid orange;
@@ -429,12 +429,12 @@ label{
 /* ================================================================= */
 
 .form{
-  padding: 40px 0 40px 0;
+  padding: 60px 0 40px 0;
 }
 
 .coloursSelection .flexContainer {
   justify-content: space-around;
-  padding: 60px 0 60px 0;
+  padding: 70px 0;
   flex-wrap: wrap;
 }
 .coloursSelection legend {
@@ -631,6 +631,7 @@ label{
   width: 450px;
   height: 300px;
   position: relative;
+  overflow: hidden;
 }
 .colorError figure img{
   position: absolute;
@@ -646,7 +647,7 @@ label{
 
 .numberOfPics .flexContainer{
   justify-content: space-around;
-  padding: 60px 0 60px 0;
+  padding: 50px 0;
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!TWO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -764,6 +765,7 @@ label{
   width: 450px;
   height: 300px;
   position: relative;
+  overflow: hidden;
 }
 .numberError figure img{
   position: absolute;
@@ -826,10 +828,10 @@ form button:focus .t
 
 /* ================================================================= */
 .gallery{
-  height: calc(100vh - 126px);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .emptyGallery{
@@ -846,23 +848,26 @@ form button:focus .t
 }
 
 .refresh{
-  margin-top: 10px;
+  margin-top: 5px;
   border-radius: 50%;
   border: 0;
   padding: .1px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: inherit;
 }
 
 .refresh img{
-  height: 110%;
-  width: 110%;
+  height: 70%;
+  width: 70%;
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!USER SELECTION 2!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .gallery2{
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .gallery2 .pic1 figure,
@@ -875,22 +880,20 @@ form button:focus .t
   padding: 5px;
 }
 
-.gallery2 .pic1{
-  flex-basis: 45%;
-  margin-right: 5%;
+.gallery2 .photo-container{
+  flex-basis: 27%;
 }
-.gallery2 .pic2{
-  padding-top: 80px;
-  flex-basis: 50%;
+
+.gallery2 .pic1{
+  margin-right: 2%;
 }
 
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!USER SELECTION 3!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .gallery3{
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  height: 90vh;
 }
 .gallery3 .pic1 figure,
 .gallery3 .pic2 figure,
@@ -904,27 +907,21 @@ form button:focus .t
   padding: 5px;
 }
 
-.gallery3 .pic1{
-  flex-basis: 30%;
-  min-width: 80px;
+.gallery3 .photo-container{
+  flex-basis: 27%;
 }
 
 .gallery3 .pic2{
-  flex-basis: 30%;
   padding: 0 5%;
-  min-width: 90px;
 }
 
 .gallery3 .pic3{
-  flex-basis: 30%;
   padding-top: 10%;
-  min-width: 90px;
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!USER SELECTION 4!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .gallery4{
   flex-wrap: wrap;
-  max-height: 100vh;
   justify-content: center;
   align-items: center;
 }
@@ -977,6 +974,8 @@ form button:focus .t
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!USER SELECTION 5!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .gallery5{
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .gallery5 .pic1 figure,
 .gallery5 .pic2 figure,
@@ -994,41 +993,38 @@ form button:focus .t
   padding: 5px;
 }
 
-
+.gallery5 .photo-container{
+  flex-basis: 16%;
+}
 
 .gallery5 .pic1{
-  flex-basis: 30%;
   margin: 0 1.5% 2% 1.5%;
 }
 
 .gallery5 .pic2{
-  flex-basis: 30%;
-  margin: 2% 1.5%;
+  margin: 2% 3%;
   position: relative;
   top: -30px;
 }
 
 
 .gallery5 .pic3{
-  flex-basis: 30%;
-  margin: 2% 2%;
+  margin: 2% 9% 2% 5%;
   position: relative;
-  top: 60px;
+  top: -20px;
 }
 
 
 .gallery5 .pic4{
-  flex-basis: 44%;
-  margin: 2% 1.5%;
+  margin: 2% 12%;
   position: relative;
   top: -40px;
 }
 
 .gallery5 .pic5{
-  flex-basis: 44%;
-  margin: 2% 1.5%;
+  margin: 0 1.5% 2% 1.5%;
   position: relative;
-  top: 100px;
+  top: -40px;
 }
 
 /* ================================================================= */
@@ -1055,9 +1051,6 @@ footer p{
   .gallery5{
     padding-bottom: 40px;
   }
-  .gallery5 .pic4{
-    margin: 4% 1.5%;
-  }
   .colorError p{
     left: 9%;
   }
@@ -1079,10 +1072,6 @@ footer p{
     left: 12%;
     top: 110px;
   }
-  .refresh{ 
-    height: 40px;
-    width: 40px;
-  }
   
 }
 
@@ -1103,24 +1092,6 @@ footer p{
     top: 110px;
     width: 230px;
   }
-  .gallery{
-    min-height: 70vh;
-  }
-  .emptyGallery{
-    height: 70vh;
-  }
-  .gallery3 .pic1{
-    flex-basis: 45%;
-  }
-  
-  .gallery3 .pic2{
-    flex-basis: 45%;
-  }
-  
-  .gallery3 .pic3{
-    flex-basis: 45%;
-    padding-top: 2%;
-  }
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!600!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -1136,9 +1107,7 @@ footer p{
     left: 20%;
     top: 95px;
   }
-  .gallery5 .pic4{
-    top: 0;
-  }
+
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!450!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -1164,24 +1133,6 @@ footer p{
   .numberError p{
     left: 18%;
     top: 75px;
-  }
-
-  .refresh{ 
-    height: 30px;
-    width: 30px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-  }
-  
-  
-  .gallery3 .pic3{
-    flex-basis: 70%;
-    position: relative;
-    top: -50px;
-  }
-  .gallery4 .pic3{
-    top: 0;
-    right: 0;
   }
 }
 

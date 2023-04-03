@@ -1,6 +1,5 @@
 import "./index.scss";
 import Nav from "./components/Nav";
-import Footer from "./components/Footer"
 import LandingPage from "./components/LandingPage";
 import Next from "./components/Next";
 import { ApiInfo } from "./components/ApiInfo";
@@ -16,7 +15,6 @@ function App() {
           <Route path="/next" element={<Next />} />
         </Routes>
       </ApiInfo>
-      <Footer />
     </div>
   );
 }

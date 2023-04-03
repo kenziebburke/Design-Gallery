@@ -3,8 +3,6 @@ import axios from "axios";
 
 const ApiContext = createContext();
 
-// const initialPicturesState = []
-
 let randomIndexes = [];
 
 const randomInteger = function (num) {
