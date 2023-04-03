@@ -967,7 +967,6 @@ form button:focus .t
 }
 
 .gallery4 .pic1 {
-  flex-shrink: 2;
   margin: 0 5% 3% 0;
   position: relative;
   top: 120px;
@@ -1094,11 +1093,50 @@ footer p{
     left: 12%;
     top: 110px;
   }
-  
+  .gallery {
+    align-items:flex-start;
+  }
+  .gallery2{
+    align-items: flex-start;
+    padding-top: 50px;
+  }
+  .gallery2 .photo-container{
+    flex-basis: 40%;
+  }
+  .gallery3{
+    align-items: flex-start;
+    padding-top: 50px;
+  }
+  .gallery3 .photo-container{
+    flex-basis: 35%;
+  }
+  .gallery3 .pic3{
+    padding-top: 2%;
+  }
+  .gallery4{
+    align-items: flex-start;
+    padding-top: 50px;
+  }
+  .gallery4 .photo-container{
+    flex-basis: 30%;
+  }
+  .gallery4 .pic1 {
+    top: -10px;
+  }
+  .gallery4 .pic3 {
+    top: 0;
+  }
+  .gallery5{
+    align-items: flex-start;
+    padding-top: 50px;
+  }
+  .gallery5 .photo-container{
+    flex-basis: 21%;
+  }
 }
 
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!700!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-@media(max-width:800px){
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!750!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+@media(max-width:750px){
   header{
     min-height: 0;
   }
@@ -1113,6 +1151,15 @@ footer p{
     left: 14%;
     top: 110px;
     width: 230px;
+  }
+  .gallery3 .photo-container{
+    flex-basis: 39%;
+  }
+  .gallery4 .photo-container{
+    flex-basis: 34%;
+  }
+  .gallery5 .photo-container{
+    flex-basis: 25%;
   }
 }
 
@@ -1155,6 +1202,23 @@ footer p{
   .numberError p{
     left: 18%;
     top: 75px;
+  }
+  .refresh img{
+    height: 50%;
+    width: 50%;
+  }
+  .gallery3 .photo-container{
+    flex-basis: 42%;
+  }
+  .gallery4 .photo-container{
+    flex-basis: 36%;
+  }
+  .gallery4 .pic4 {
+    top: -10px;
+  }
+  
+  .gallery5 .photo-container{
+    flex-basis: 27%;
   }
 }
 
